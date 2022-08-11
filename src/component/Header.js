@@ -6,10 +6,17 @@ const MyHeader = s.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 15px 40px;
+  width:100%;
+  position:fixed;
+  z-index : 10;
+  top:0;
+  background-color:var(--bg-color);
+  box-shadow:0 5px 10px rgba(0 , 0 ,0 , 0.1);
+  
 
 h1{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--main-text-color);
 }
 
@@ -53,6 +60,7 @@ li:hover , button:hover{
       align-items : start;
       padding : 60px 40px;
       background-color : var(--primary-color);
+      box-shadow : -5px 0 10px rgba(0,0,0,0.2);
       position : fixed;
       top : 0;
       right : 0;

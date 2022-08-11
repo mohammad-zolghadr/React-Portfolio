@@ -10,7 +10,7 @@ const MyDiv = s.div`
     display : flex;
     flex-direction : column;
     position:fixed;
-    top : 30px;
+    top : 15px;
     right : 20px;
     z-index : 15;
 
