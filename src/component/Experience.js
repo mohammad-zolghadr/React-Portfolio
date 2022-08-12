@@ -35,21 +35,21 @@ class Experience extends Component {
               alt="Speech Recognation Project"
               title="Speech Recognation"
               text="You can speak in persian or english and this application can detect your voice and with AI it can guess your birthday!"
-              techs={['html', 'css', 'js']}
+              techs={['html', 'css', 'js', 'git']}
             />
             <Item
               src={imgProTodo}
               alt="Professional Todo App Project"
               title="Professional Todo App"
               text="You can speak in persian or english and this application can detect your voice and with AI it can guess your birthday!"
-              techs={['html', 'css', 'js', 'react']}
+              techs={['html', 'css', 'js', 'react', 'git']}
             />
             <Item
               src={imgSimpleTodo}
               alt="Simple Todo App Project"
               title="Simple Todo App"
               text="You can speak in persian or english and this application can detect your voice and with AI it can guess your birthday!"
-              techs={['html', 'css', 'js']}
+              techs={['html', 'css', 'js', 'git']}
             />
           </ItemsWrapper>
         </Container>

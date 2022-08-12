@@ -12,9 +12,14 @@
     --secondary-color : #f7931e;
     --main-text-color : #1a1a1a;
     --second-text-color: #666666;
+    --pale-text-color: #999999;
     --bg-color : #f8f8f8;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,button{
+    font-family: sans-serif;
 }
 
 body{

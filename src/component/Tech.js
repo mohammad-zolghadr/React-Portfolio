@@ -34,7 +34,7 @@ const DivUi = s.div`
     transition:0.3s;
 
     img{
-        width : 65%;
+        width : 25px;
     }
 
     &:hover{
@@ -48,7 +48,7 @@ class Tech extends Component {
     const { data } = this.props;
 
     const tempUrl = imageData.find((e) => {
-      return e.data === data ? e : '';
+      return e.data === data ? e.url : '';
     });
 
     return (

@@ -121,7 +121,6 @@ const ButtonHire = s.button`
     }
 
 `;
-
 class Introduce extends Component {
   render() {
     return (

@@ -40,7 +40,7 @@ const DivData = s.div`
     }
 
     p{
-        color : var(--second-text-color);
+        color : var(--pale-text-color);
         text-align : justify;
         line-height : 130%;
         font-size : 0.9rem;
@@ -58,16 +58,17 @@ const DivTech = s.div`
         display : flex;
         aign-items : center;
         justify-content : center;
+        flex-wrap : wrap;
+
+        img{
+          width:25px;
+          height:25px;
+        }
 `;
 
 class CardItem extends Component {
   render() {
     const { src, alt, title, text, techs } = this.props;
-
-    // let techItems = [];
-    // techs.forEach((e) => {
-    //   techItems.push(<Tech data={e} key={Math.random()} />);
-    // });
 
     return (
       <>
@@ -75,7 +76,16 @@ class CardItem extends Component {
           <img src={src} alt={alt} />
           <DivData>
             <h2>{title}</h2>
-            {/* <DivTech>{techItems}</DivTech> */}
+            <DivTech>
+              {techs[0] ? <Tech data={techs[0]} /> : ''}
+              {techs[1] ? <Tech data={techs[1]} /> : ''}
+              {techs[2] ? <Tech data={techs[2]} /> : ''}
+              {techs[3] ? <Tech data={techs[3]} /> : ''}
+              {techs[4] ? <Tech data={techs[4]} /> : ''}
+              {techs[5] ? <Tech data={techs[5]} /> : ''}
+              {techs[6] ? <Tech data={techs[6]} /> : ''}
+              {techs[7] ? <Tech data={techs[7]} /> : ''}
+            </DivTech>
             <p>{text}</p>
             <div>
               <CustomButton text="See in github" type="" />
