@@ -3,13 +3,6 @@ import React, { Component } from 'react';
 import s from 'styled-components';
 
 import mozoImage from '../images/mozo.png';
-import icoHtml from '../images/html-ico.png';
-import icoCss from '../images/css-ico.png';
-import icoJs from '../images/js-ico.png';
-import icoReact from '../images/react-ico.png';
-import icoBootstrap from '../images/bootstrap-ico.png';
-import icoGit from '../images/git-ico.png';
-import icoFigma from '../images/figma-ico.png';
 
 import Tech from './Tech';
 
@@ -25,16 +18,10 @@ const Wrapper = s.div`
     margin-top:100px;
 
     @media(min-width:768px){
-        max-width : 95%;
         flex-direction : row;
         height : 400px;
         justify-content : space-evenly;
     }
-    
-    @media(min-width:1200px){
-        max-width : 80%;
-    }
-
 `;
 
 const ImageUi = s.div`
@@ -142,7 +129,7 @@ class Introduce extends Component {
         <Wrapper>
           <ImageUi>
             <div>
-              <img src={mozoImage} alt="Mozo Image" />
+              <img src={mozoImage} alt="Mohammad Zolghadr" />
             </div>
             <div className="circle"></div>
             <div className="circle" style={{ animationDelay: '1s' }}></div>
@@ -151,13 +138,13 @@ class Introduce extends Component {
             <h1>Mohammad Zolghadr</h1>
             <h2>Front-end Developer</h2>
             <div>
-              <Tech src={icoHtml} alt="html icon" />
-              <Tech src={icoCss} alt="css icon" />
-              <Tech src={icoJs} alt="javascript icon" />
-              <Tech src={icoReact} alt="react.js icon" />
-              <Tech src={icoBootstrap} alt="bootstrap icon" />
-              <Tech src={icoGit} alt="git icon" />
-              <Tech src={icoFigma} alt="figma icon" />
+              <Tech data={'html'} />
+              <Tech data={'css'} />
+              <Tech data={'js'} />
+              <Tech data={'react'} />
+              <Tech data={'bootstrap'} />
+              <Tech data={'git'} />
+              <Tech data={'figma'} />
             </div>
           </DescUi>
           <ButtonHire>Hire Me</ButtonHire>

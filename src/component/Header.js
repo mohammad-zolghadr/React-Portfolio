@@ -95,13 +95,13 @@ class Header extends Component {
           <h1>MozoPlus</h1>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="https://mohammadzolghadr.ir">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="https://mohammadzolghadr.ir">About</a>
             </li>
             <li>
-              <a href="#">Download Resume</a>
+              <a href="https://mohammadzolghadr.ir">Download Resume</a>
             </li>
             <li>
               <button>Contact</button>
