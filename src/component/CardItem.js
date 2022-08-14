@@ -77,14 +77,9 @@ class CardItem extends Component {
           <DivData>
             <h2>{title}</h2>
             <DivTech>
-              {techs[0] ? <Tech data={techs[0]} /> : ''}
-              {techs[1] ? <Tech data={techs[1]} /> : ''}
-              {techs[2] ? <Tech data={techs[2]} /> : ''}
-              {techs[3] ? <Tech data={techs[3]} /> : ''}
-              {techs[4] ? <Tech data={techs[4]} /> : ''}
-              {techs[5] ? <Tech data={techs[5]} /> : ''}
-              {techs[6] ? <Tech data={techs[6]} /> : ''}
-              {techs[7] ? <Tech data={techs[7]} /> : ''}
+              {techs.map((e) => {
+                return e && <Tech key={e} data={e} />;
+              })}
             </DivTech>
             <p>{text}</p>
             <div>

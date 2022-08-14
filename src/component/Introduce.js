@@ -122,6 +122,12 @@ const ButtonHire = s.button`
 
 `;
 class Introduce extends Component {
+  constructor() {
+    super();
+    this.state = {
+      skills: ['html', 'css', 'js', 'react', 'bootstrap', 'git', 'figma'],
+    };
+  }
   render() {
     return (
       <>
@@ -137,13 +143,9 @@ class Introduce extends Component {
             <h1>Mohammad Zolghadr</h1>
             <h2>Front-end Developer</h2>
             <div>
-              <Tech data={'html'} />
-              <Tech data={'css'} />
-              <Tech data={'js'} />
-              <Tech data={'react'} />
-              <Tech data={'bootstrap'} />
-              <Tech data={'git'} />
-              <Tech data={'figma'} />
+              {this.state.skills.map((e) => {
+                return <Tech key={e} data={e} />;
+              })}
             </div>
           </DescUi>
           <ButtonHire>Hire Me</ButtonHire>
