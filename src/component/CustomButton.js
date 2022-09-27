@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import s from 'styled-components';
 
 const MyButton = s.button`
     border-radius : 50px;
-    padding : 8px 10px;
+    padding : 8px 15px;
     font-weight:bold;
     font-size : 0.7rem;
-    margin : 2px;
+    margin : 5px;
     transition : 0.3s;
     cursor : pointer;
     border : 2px solid var(--primary-color);
@@ -22,15 +22,12 @@ const MyButton = s.button`
 
 `;
 
-class CustomButton extends Component {
-  render() {
-    const { text, type } = this.props;
-    return (
-      <>
-        <MyButton type={type}>{text}</MyButton>
-      </>
-    );
-  }
-}
+const CustomButton = ({ text, type }) => {
+  return (
+    <>
+      <MyButton type={type}>{text}</MyButton>
+    </>
+  );
+};
 
 export default CustomButton;

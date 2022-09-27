@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import useTitle from './hook/useTitle';
 
+// Components
 import Burger from './component/BurgerMenu';
 import Introduce from './component/Introduce';
 import Experience from './component/Experience';
@@ -20,18 +22,17 @@ const MainContainer = s.main`
 
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        <Burger />
-        <MainContainer>
-          <Introduce />
-          <Experience />
-        </MainContainer>
-      </>
-    );
-  }
-}
+const App = () => {
+  useTitle('صفحه اصلی');
+  return (
+    <>
+      <Burger />
+      <MainContainer>
+        <Introduce />
+        <Experience />
+      </MainContainer>
+    </>
+  );
+};
 
 export default App;

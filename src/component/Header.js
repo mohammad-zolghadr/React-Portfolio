@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import s from 'styled-components';
 
@@ -44,7 +44,7 @@ button{
   background-color: var(--primary-color);
   color: var(--bg-color);
   padding: 10px 20px;
-  border-radius: 20px 0 20px 20px;
+  border-radius: 0 20px 20px 20px;
   transition: 0.3s;
 }
 
@@ -54,16 +54,16 @@ li:hover , button:hover{
 
 @media(max-width:768px) {
   ul{
-      transform : ${(props) => (props.open ? 'translateX(0)' : 'translateX(150%)')};
+      transform : ${(props) => (props.open ? 'translateX(0)' : 'translateX(-150%)')};
       flex-direction: column;
       justify-content : start;
       align-items : start;
-      padding : 60px 40px;
+      padding : 60px 80px;
       background-color : var(--primary-color);
-      box-shadow : -5px 0 10px rgba(0,0,0,0.2);
+      box-shadow : 5px 0 10px rgba(0,0,0,0.2);
       position : fixed;
       top : 0;
-      right : 0;
+      left : 0;
       z-index : 10;
       height : 100vh;
   }
@@ -87,30 +87,28 @@ li:hover , button:hover{
 
 }`;
 
-class Header extends Component {
-  render() {
-    return (
-      <>
-        <MyHeader open={this.props.open}>
-          <h1>MozoPlus</h1>
-          <ul>
-            <li>
-              <a href="https://mohammadzolghadr.ir">Home</a>
-            </li>
-            <li>
-              <a href="https://mohammadzolghadr.ir">About</a>
-            </li>
-            <li>
-              <a href="https://mohammadzolghadr.ir">Download Resume</a>
-            </li>
-            <li>
-              <button>Contact</button>
-            </li>
-          </ul>
-        </MyHeader>
-      </>
-    );
-  }
-}
+const Header = ({ open }) => {
+  return (
+    <>
+      <MyHeader open={open}>
+        <h1>محمد ذوالقدر</h1>
+        <ul>
+          <li>
+            <a href="https://mohammadzolghadr.ir">خانه</a>
+          </li>
+          <li>
+            <a href="https://mohammadzolghadr.ir">درباره من</a>
+          </li>
+          <li>
+            <a href="https://mohammadzolghadr.ir">دانلود رزومه</a>
+          </li>
+          <li>
+            <button>ارتباط با من</button>
+          </li>
+        </ul>
+      </MyHeader>
+    </>
+  );
+};
 
 export default Header;

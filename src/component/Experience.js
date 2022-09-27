@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import s from 'styled-components';
 
 import Item from './CardItem';
 
-import imgSpeechRecognation from '../images/speechRecognation.png';
-import imgProTodo from '../images/proTodoDashboard.png';
-import imgSimpleTodo from '../images/simpleTodo.png';
+import imgSpeechRecognation from '../assets/images/speechRecognation.png';
 
 const Container = s.div`
 
@@ -23,39 +21,23 @@ justify-content : center;
 flex-wrap :wrap;
 `;
 
-class Experience extends Component {
-  render() {
-    return (
-      <>
-        <Container>
-          <h2>Projects</h2>
-          <ItemsWrapper>
-            <Item
-              src={imgSpeechRecognation}
-              alt="Speech Recognation Project"
-              title="Speech Recognation"
-              text="You can speak in persian or english and this application can detect your voice and with AI it can guess your birthday!"
-              techs={['html', 'css', 'js', 'git']}
-            />
-            <Item
-              src={imgProTodo}
-              alt="Professional Todo App Project"
-              title="Professional Todo App"
-              text="You can speak in persian or english and this application can detect your voice and with AI it can guess your birthday!"
-              techs={['html', 'css', 'js', 'react', 'git']}
-            />
-            <Item
-              src={imgSimpleTodo}
-              alt="Simple Todo App Project"
-              title="Simple Todo App"
-              text="You can speak in persian or english and this application can detect your voice and with AI it can guess your birthday!"
-              techs={['html', 'css', 'js', 'git']}
-            />
-          </ItemsWrapper>
-        </Container>
-      </>
-    );
-  }
-}
+const Experience = () => {
+  return (
+    <>
+      <Container>
+        <h2>پروژه ها</h2>
+        <ItemsWrapper>
+          <Item
+            src={imgSpeechRecognation}
+            alt="Speech Recognation Project"
+            title="Speech Recognation"
+            text="توی این پروژه جاوااسکریپتی میتونی انگلیسی یا فارسی صحبت کنی و این برنامه که با جاوااسکریپت خام ساخته شده، صدای شما رو تشخیص میده و تاریخ تولدت رو به صورت روز و ماه و سال مینویسیه و محاسبه میکنه"
+            techs={['html', 'css', 'js', 'git']}
+          />
+        </ItemsWrapper>
+      </Container>
+    </>
+  );
+};
 
 export default Experience;

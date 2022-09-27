@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import s from 'styled-components';
 
@@ -66,31 +66,27 @@ const DivTech = s.div`
         }
 `;
 
-class CardItem extends Component {
-  render() {
-    const { src, alt, title, text, techs } = this.props;
-
-    return (
-      <>
-        <Wrapper>
-          <img src={src} alt={alt} />
-          <DivData>
-            <h2>{title}</h2>
-            <DivTech>
-              {techs.map((e) => {
-                return e && <Tech key={e} data={e} />;
-              })}
-            </DivTech>
-            <p>{text}</p>
-            <div>
-              <CustomButton text="See in github" type="" />
-              <CustomButton text="Show online project" type="cta" />
-            </div>
-          </DivData>
-        </Wrapper>
-      </>
-    );
-  }
-}
+const CardItem = ({ src, alt, title, text, techs }) => {
+  return (
+    <>
+      <Wrapper>
+        <img src={src} alt={alt} />
+        <DivData>
+          <h2>{title}</h2>
+          <DivTech>
+            {techs.map((e) => {
+              return e && <Tech key={e} data={e} />;
+            })}
+          </DivTech>
+          <p>{text}</p>
+          <div>
+            <CustomButton text="مشاهده دمو" type="cta" />
+            <CustomButton text="گیت هاب" type="" />
+          </div>
+        </DivData>
+      </Wrapper>
+    </>
+  );
+};
 
 export default CardItem;

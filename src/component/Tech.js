@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import s from 'styled-components';
 
-import icoHtml from '../images/html-ico.png';
-import icoCss from '../images/css-ico.png';
-import icoJs from '../images/js-ico.png';
-import icoReact from '../images/react-ico.png';
-import icoBootstrap from '../images/bootstrap-ico.png';
-import icoGit from '../images/git-ico.png';
-import icoFigma from '../images/figma-ico.png';
+// Icon
+import icoHtml from '../assets/images/html-ico.png';
+import icoCss from '../assets/images/css-ico.png';
+import icoJs from '../assets/images/js-ico.png';
+import icoReact from '../assets/images/react-ico.png';
+import icoBootstrap from '../assets/images/bootstrap-ico.png';
+import icoGit from '../assets/images/git-ico.png';
+import icoFigma from '../assets/images/figma-ico.png';
 
 const imageData = [
   { data: 'html', url: icoHtml, alt: 'html icon' },
@@ -43,22 +44,18 @@ const DivUi = s.div`
 
 `;
 
-class Tech extends Component {
-  render() {
-    const { data } = this.props;
+const Tech = ({ data }) => {
+  const tempUrl = imageData.find((e) => {
+    return e.data === data ? e.url : '';
+  });
 
-    const tempUrl = imageData.find((e) => {
-      return e.data === data ? e.url : '';
-    });
-
-    return (
-      <>
-        <DivUi>
-          <img src={tempUrl['url']} alt={tempUrl['alt']} />
-        </DivUi>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <DivUi>
+        <img src={tempUrl['url']} alt={tempUrl['alt']} />
+      </DivUi>
+    </>
+  );
+};
 
 export default Tech;

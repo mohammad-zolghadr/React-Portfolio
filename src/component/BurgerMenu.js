@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import s from 'styled-components';
 import Header from './Header.js';
@@ -11,7 +11,7 @@ const MyDiv = s.div`
     flex-direction : column;
     position:fixed;
     top : 15px;
-    right : 20px;
+    left : 20px;
     z-index : 15;
 
     &:hover{
@@ -42,28 +42,23 @@ const MyDiv = s.div`
       }
     `;
 
-class BurgerMenu extends Component {
-  constructor() {
-    super();
-    this.state = { open: false };
-  }
+const BurgerMenu = () => {
+  const [openMenuState, setOpenMenuState] = useState(false);
 
-  openMenu = () => {
-    this.setState({ open: !this.state.open });
+  const openMenu = () => {
+    setOpenMenuState(!openMenuState);
   };
 
-  render() {
-    return (
-      <>
-        <MyDiv open={this.state.open} onClick={this.openMenu}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </MyDiv>
-        <Header open={this.state.open} />
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <MyDiv open={openMenuState} onClick={openMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </MyDiv>
+      <Header open={openMenuState} />
+    </>
+  );
+};
 
 export default BurgerMenu;

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import s from 'styled-components';
 
-import mozoImage from '../images/mozo.png';
+import mozoImage from '../assets/images/mozo.png';
 
 import Tech from './Tech';
 
@@ -121,38 +121,40 @@ const ButtonHire = s.button`
     }
 
 `;
-class Introduce extends Component {
-  constructor() {
-    super();
-    this.state = {
-      skills: ['html', 'css', 'js', 'react', 'bootstrap', 'git', 'figma'],
-    };
-  }
-  render() {
-    return (
-      <>
-        <Wrapper>
-          <ImageUi>
-            <div>
-              <img src={mozoImage} alt="Mohammad Zolghadr" />
-            </div>
-            <div className="circle"></div>
-            <div className="circle" style={{ animationDelay: '1s' }}></div>
-          </ImageUi>
-          <DescUi>
-            <h1>Mohammad Zolghadr</h1>
-            <h2>Front-end Developer</h2>
-            <div>
-              {this.state.skills.map((e) => {
-                return <Tech key={e} data={e} />;
-              })}
-            </div>
-          </DescUi>
-          <ButtonHire>Hire Me</ButtonHire>
-        </Wrapper>
-      </>
-    );
-  }
-}
+
+const Introduce = () => {
+  const [skills, setSkills] = useState([
+    'html',
+    'css',
+    'js',
+    'react',
+    'bootstrap',
+    'git',
+    'figma',
+  ]);
+  return (
+    <>
+      <Wrapper>
+        <ImageUi>
+          <div>
+            <img src={mozoImage} alt="Mohammad Zolghadr" />
+          </div>
+          <div className="circle"></div>
+          <div className="circle" style={{ animationDelay: '1s' }}></div>
+        </ImageUi>
+        <DescUi>
+          <h1>محمد ذوالقدر</h1>
+          <h2>توسعه دهنده فرانت‌اند</h2>
+          <div>
+            {skills.map((e) => {
+              return <Tech key={e} data={e} />;
+            })}
+          </div>
+        </DescUi>
+        <ButtonHire>ارتباط با من</ButtonHire>
+      </Wrapper>
+    </>
+  );
+};
 
 export default Introduce;
